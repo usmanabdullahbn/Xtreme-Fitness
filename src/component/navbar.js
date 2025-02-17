@@ -8,7 +8,7 @@ const Navbar = () => {
         <Link to="/" className="flex items-center gap-2">
           {/* <img src={logo} alt="Xtreme Fitness" className="w-10 h-10 object-contain" /> */}
           <span className="text-xl pl-24 font-bold text-white">
-            XTREME FITNESS
+            COMMANDO FITNESS GYM
           </span>
         </Link>
 
