@@ -5,6 +5,9 @@ import Testimonials from '../component/Testomorials'
 import PricingSection from '../component/Pricing'
 import BlogSection from '../component/Blog'
 import FeaturesSection from '../component/Features'
+import AboutSection from '../component/About'
+import ContactSection from '../component/Contact'
+import ServicesSection from '../component/Services'
 
 
 const Home = () => {
@@ -13,10 +16,13 @@ const Home = () => {
         {/* <Navbar /> */}
         <Hero />
         <FeaturesSection />
+        <AboutSection />
+        <ServicesSection />
         <Testimonials />
-        <TeamSection />
         <PricingSection />
+        <TeamSection />
         <BlogSection />
+        <ContactSection />
     </div>
   )
 }
