@@ -31,7 +31,7 @@ const AboutSection = () => {
               <h2 className="text-white text-4xl md:text-5xl font-bold leading-tight mb-6">
                 WELCOME TO THE
                 <br />
-                XTREME FITNESS
+                COMMANDO FITNESS GYM
               </h2>
               <p className="text-gray-300 text-lg">
                 Euis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur ex

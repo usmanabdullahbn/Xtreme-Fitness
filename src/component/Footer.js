@@ -15,7 +15,7 @@ const Footer = () => {
                 alt="Xtreme Fitness"
                 className="w-10 h-10 object-contain"
               /> */}
-              <span className="text-xl font-bold">XTREME FITNESS</span>
+              <span className="text-xl font-bold">COMMANDO FITNESS GYM</span>
             </Link>
             <p className="text-gray-400 text-sm">
               Your ultimate fitness destination for strength and well-being.
@@ -80,7 +80,7 @@ const Footer = () => {
               </div>
               <div>
                 <p className="font-medium">Email:</p>
-                <p className="text-gray-400">info@xtremefitness.com</p>
+                <p className="text-gray-400">info@commandofitnessgym.com</p>
               </div>
               <div>
                 <p className="font-medium">Phone:</p>
@@ -92,7 +92,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-zinc-900 mt-12 pt-6 text-center text-gray-400 text-sm">
-          © 2025 xtremefitness.com | All Rights Reserved.
+          © 2025 commandofitnessgym.com | All Rights Reserved.
         </div>
       </div>
     </footer>
