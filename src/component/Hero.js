@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram } from "lucide-react";
+import { ReactTyped } from "react-typed";
 
 const Hero = () => {
   return (
@@ -29,11 +30,25 @@ const Hero = () => {
       <div className="relative container pt-32 pl-24 min-h-screen flex flex-col justify-center">
         <div className="max-w-2xl space-y-6">
           <h1 className="text-7xl font-bold text-white" data-aos="fade-up">
-            <span className="block">BE</span>
-            <span className="text-[#22c55e]">STRONG</span>
+            <span className="block">
+              {" "}
+              <ReactTyped strings={["BE"]} typeSpeed={50} showCursor={false} />
+            </span>
+            <span className="text-[#22c55e]">
+              {" "}
+              <ReactTyped
+                strings={["STRONG"]}
+                typeSpeed={50}
+                showCursor={false}
+              />
+            </span>
           </h1>
           <p className="text-2xl text-white/90" data-aos="fade-up">
-            Best GYM & Fitness Center Build Your Health.
+            <ReactTyped
+              strings={["Best GYM And Fitness Center Build Your Health."]}
+              typeSpeed={20}
+              showCursor={false}
+            />
           </p>
           <Link
             to="/join"
