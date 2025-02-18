@@ -1,7 +1,9 @@
 "use client"
 
-import { useState } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const testimonials = [
   {
@@ -9,7 +11,7 @@ const testimonials = [
       "Ruis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur exceusint occaecat cupidata non proident, sunt in culpa aui officia deser mollit anim laborum reprehenderaui in eau voluptate velit esse quam nihil.",
     name: "KEVIN ANDREW",
     role: "Happy Client",
-    image:  "/placeholder.svg?height=600&width=800",
+    image: "/placeholder.svg?height=600&width=800",
   },
   {
     quote:
@@ -25,27 +27,31 @@ const testimonials = [
     role: "Regular Member",
     image: "/placeholder.svg?height=600&width=800",
   },
-]
+];
 
-export default function Testimonials() {
-  const [currentSlide, setCurrentSlide] = useState(0)
+const Testimonials = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % testimonials.length)
-  }
+    setCurrentSlide((prev) => (prev + 1) % testimonials.length);
+  };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
+    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
 
   return (
-    <section className="relative bg-black py-20 overflow-hidden">
+    <section className="relative bg-black py-20 overflow-hidden" data-aos="fade-up">
       {/* Background Image Overlay */}
       <div className="absolute inset-0 bg-black/70" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="max-w-4xl mx-auto mb-16 text-center">
+        <div className="max-w-4xl mx-auto mb-16 text-center" data-aos="fade-up">
           <h3 className="text-[#22c55e] text-xl mb-4">TESTIMONIALS</h3>
           <h2 className="text-white text-4xl md:text-5xl font-bold leading-tight">
             WHAT OUR CLIENTS
@@ -55,7 +61,7 @@ export default function Testimonials() {
         </div>
 
         {/* Testimonial Slider */}
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto" data-aos="fade-up">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Quote Section */}
             <div className="space-y-6">
@@ -102,6 +108,7 @@ export default function Testimonials() {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
+export default Testimonials;

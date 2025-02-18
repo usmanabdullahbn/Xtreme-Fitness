@@ -42,10 +42,10 @@ const pricingPlans = [
 
 const PricingSection = () => {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-20" data-aos="fade-up">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <h3 className="text-[#22c55e] text-xl mb-4">PRICING TABLES</h3>
           <h2 className="text-black text-4xl md:text-5xl font-bold">EXCLUSIVE PRICING PLANS</h2>
         </div>
@@ -56,6 +56,7 @@ const PricingSection = () => {
             <div
               key={index}
               className={`relative bg-zinc-900 rounded-lg p-8 flex flex-col h-full ${plan.isPopular ? "border-2 border-[#22c55e]" : ""}`}
+              data-aos="fade-up"
             >
               {plan.isPopular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">

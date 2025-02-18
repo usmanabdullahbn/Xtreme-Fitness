@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const teamMembers = [
   {
@@ -36,11 +38,15 @@ const SocialLinks = () => (
 );
 
 const TeamSection = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
-    <section className="bg-[#22c55e] py-20">
+    <section className="bg-[#22c55e] py-20" data-aos="fade-up">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <h3 className="text-white text-xl mb-4">TEAM MEMBERS</h3>
           <h2 className="text-white text-4xl md:text-5xl font-bold">TEAM OF EXPERT COACHES</h2>
         </div>
@@ -48,7 +54,7 @@ const TeamSection = () => {
         {/* Team Members Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
           {teamMembers.map((member, index) => (
-            <div key={index} className="flex flex-col items-center">
+            <div key={index} className="flex flex-col items-center" data-aos="fade-up">
               {/* Profile Image */}
               <div className="w-64 h-64 rounded-full overflow-hidden mb-6">
                 <img

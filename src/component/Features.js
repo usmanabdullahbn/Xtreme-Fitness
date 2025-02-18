@@ -46,7 +46,7 @@ const FeaturesSection = () => {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <h3 className="text-[#22c55e] text-xl mb-4">WHY CHOOSE US</h3>
           <h2 className="text-4xl md:text-5xl font-bold">BUILD YOUR BEST BODY</h2>
         </div>
@@ -54,7 +54,11 @@ const FeaturesSection = () => {
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white p-8 rounded-lg text-center group hover:shadow-lg transition-shadow">
+            <div
+              key={index}
+              className="bg-white p-8 rounded-lg text-center group hover:shadow-lg transition-shadow"
+              data-aos="fade-up"
+            >
               {/* Icon */}
               <div className="mb-6 inline-flex">
                 <feature.icon
@@ -78,7 +82,7 @@ const FeaturesSection = () => {
         </div>
 
         {/* Navigation */}
-        <div className="flex justify-center gap-4 mt-12">
+        <div className="flex justify-center gap-4 mt-12" data-aos="fade-up">
           <button
             className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-[#22c55e] hover:text-white hover:border-[#22c55e] transition-colors"
             aria-label="Previous"

@@ -2,11 +2,11 @@ import { Play } from "lucide-react"
 
 const ContactSection = () => {
   return (
-    <section className="bg-black py-20">
+    <section className="bg-black py-20" data-aos="fade-up">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
-          <div className="relative">
+          <div className="relative" data-aos="fade-up">
             <div className="relative w-full aspect-square rounded-full overflow-hidden">
               <div className="absolute inset-0 border-[20px] border-[#22c55e] rounded-full" />
               <img
@@ -18,7 +18,7 @@ const ContactSection = () => {
           </div>
 
           {/* Content Section */}
-          <div className="space-y-8">
+          <div className="space-y-8" data-aos="fade-up">
             <div>
               <h3 className="text-[#22c55e] text-xl mb-4">CONTACT US</h3>
               <h2 className="text-white text-4xl md:text-5xl font-bold leading-tight mb-6">
@@ -28,7 +28,7 @@ const ContactSection = () => {
             </div>
 
             {/* Contact Form */}
-            <form className="space-y-4">
+            <form className="space-y-4" data-aos="fade-up">
               <div className="grid grid-cols-2 gap-4">
                 <input
                   type="text"
@@ -78,4 +78,3 @@ const ContactSection = () => {
 }
 
 export default ContactSection
-

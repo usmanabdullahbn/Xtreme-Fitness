@@ -1,4 +1,7 @@
-import { Play } from "lucide-react"
+import { Play } from "lucide-react";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import AOS from "aos";
 
 const services = [
   {
@@ -37,11 +40,15 @@ const services = [
       </svg>
     ),
   },
-]
+];
 
 const ServicesSection = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
-    <section className="relative">
+    <section className="relative" data-aos="fade-up">
       {/* Split Background */}
       <div className="absolute inset-0">
         <div className="h-1/2 bg-[#22c55e]" />
@@ -50,7 +57,7 @@ const ServicesSection = () => {
 
       <div className="relative container mx-auto px-4 py-20">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <h3 className="text-white text-xl mb-4">OUR SERVICES</h3>
           <h2 className="text-white text-4xl md:text-5xl font-bold leading-tight">
             SOLUTIONS FOR MOVING BETTER
@@ -59,9 +66,9 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-12" data-aos="fade-up">
           {services.map((service, index) => (
-            <div key={index} className="relative group overflow-hidden bg-black">
+            <div key={index} className="relative group overflow-hidden bg-black" data-aos="fade-up">
               <div className="aspect-[4/3]">
                 <img src="/placeholder.svg" alt="" className="w-full h-full object-cover opacity-60" />
               </div>
@@ -81,7 +88,7 @@ const ServicesSection = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="text-center">
+        <div className="text-center" data-aos="fade-up">
           <button className="inline-flex items-center bg-[#22c55e] text-white hover:bg-black hover:text-white px-8 py-4 rounded-full text-lg font-bold transition-colors">
             Join us now
             <span className="ml-2 w-6 h-6 rounded-full bg-white flex items-center justify-center">
@@ -91,8 +98,7 @@ const ServicesSection = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ServicesSection
-
+export default ServicesSection;
