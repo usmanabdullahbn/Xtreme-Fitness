@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram } from "lucide-react";
 import { ReactTyped } from "react-typed";
+import bgImg from "../asserts/@sadiqAlikhan.svg"
 
 const Hero = () => {
   return (
     <div className="relative min-h-screen bg-black">
       <div className="absolute inset-0">
-        <img alt="Hero Background" className="w-full h-full object-cover" />
+        <img alt="Hero Background" className="w-full h-full object-cover" src={bgImg}/>
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
