@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white pt-16 pb-6">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:pl-24 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pl-2 sm:pl-24 gap-12">
           {/* Brand Section */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
