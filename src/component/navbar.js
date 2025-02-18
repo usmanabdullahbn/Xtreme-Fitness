@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className="container flex items-center justify-between h-20">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <span className="text-xl font-bold text-white lg:pl-24">COMMANDO FITNESS GYM</span>
+          <span className="text-xl font-bold text-white pl-2 lg:pl-20">COMMANDO FITNESS GYM</span>
         </Link>
 
         {/* Desktop Navigation */}
