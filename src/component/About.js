@@ -2,6 +2,7 @@ import { Play } from "lucide-react";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import AOS from "aos";
+import img from "../asserts/about img.jpg"
 
 const stats = [
   { number: "600K+", label: "WORKING HOURS" },
@@ -24,7 +25,7 @@ const AboutSection = () => {
             <div className="relative w-full aspect-square rounded-full overflow-hidden">
               <div className="absolute inset-0 border-[20px] border-[#22c55e] rounded-full" />
               <img
-                src="/placeholder.svg?height=800&width=800"
+                src={img}
                 alt="Training session"
                 className="w-full h-full object-cover"
               />
