@@ -21,7 +21,7 @@ const Hero = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative container pt-32 px-16 min-h-screen flex flex-col md:flex-row items-center justify-between">
+      <div className="relative container pt-32 px-24 min-h-screen flex flex-col md:flex-row items-center justify-between">
         {/* Text Content */}
         <div className="max-w-xl space-y-6">
           <h1 className="text-7xl font-bold text-white" data-aos="fade-up">
