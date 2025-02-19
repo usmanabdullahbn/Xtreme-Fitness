@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram } from "lucide-react";
 import { ReactTyped } from "react-typed";
-import bgImg from "../asserts/@sadiqAlikhan.svg";
-import img from "../asserts/hero img.jpg";
+import img from "../asserts/@sadiqAlikhan.svg";
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen bg-black">
       <div className="absolute inset-0">
-        <img alt="Hero Background" className="w-full h-full " src={bgImg} />
+        {/* <img alt="Hero Background" className="w-full h-full " src={bgImg} /> */}
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
@@ -22,7 +21,7 @@ const Hero = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative container pt-32 px-10 min-h-screen flex flex-col md:flex-row items-center justify-between">
+      <div className="relative container pt-32 px-16 min-h-screen flex flex-col md:flex-row items-center justify-between">
         {/* Text Content */}
         <div className="max-w-xl space-y-6">
           <h1 className="text-7xl font-bold text-white" data-aos="fade-up">
