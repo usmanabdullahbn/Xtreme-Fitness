@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navItems = ["Home", "About", "Services", "Trainers", "Pricing", "Coming Soon"];
+  const navItems = ["Home", "About", "Services", "Trainers", "Pricing"];
 
   // Prevent scrolling when menu is open
   useEffect(() => {
@@ -31,7 +31,7 @@ const Navbar = () => {
           {navItems.map((item) => (
             <Link
               key={item}
-              to={`/${item.toLowerCase().replace(" ", "-")}`}
+              to='/'
               className={`text-sm font-medium ${
                 item === "Home" ? "text-[#22c55e]" : "text-white hover:text-[#22c55e]"
               } transition-colors`}

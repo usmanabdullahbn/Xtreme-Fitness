@@ -2,7 +2,7 @@ import { Play } from "lucide-react";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import AOS from "aos";
-import img from "../asserts/about img.jpg"
+import img from "../asserts/about img.jpg";
 
 const stats = [
   { number: "600K+", label: "WORKING HOURS" },
@@ -42,8 +42,13 @@ const AboutSection = () => {
                 COMMANDO FITNESS GYM
               </h2>
               <p className="text-gray-300 text-lg">
-                Euis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur ex
-                sint occaecat cupidatat non proident, sunt in cular aui officia deserunt mollit anim laborum.
+                At Commando Fitness Gym, we believe in pushing limits and
+                building strength—both physically and mentally. Whether you're
+                just starting your fitness journey or looking to take it to the
+                next level, we’ve got you covered. Our gym offers top-quality
+                equipment, expert trainers, and high-energy workouts designed to
+                help you get stronger, fitter, and more confident. Join our
+                community and train like a commando!
               </p>
             </div>
 
@@ -51,7 +56,9 @@ const AboutSection = () => {
             <div className="grid grid-cols-2 gap-8" data-aos="fade-up">
               {stats.map((stat, index) => (
                 <div key={index} className="space-y-2">
-                  <div className="text-[#22c55e] text-4xl md:text-5xl font-bold">{stat.number}</div>
+                  <div className="text-[#22c55e] text-4xl md:text-5xl font-bold">
+                    {stat.number}
+                  </div>
                   <div className="text-white text-sm">{stat.label}</div>
                 </div>
               ))}
