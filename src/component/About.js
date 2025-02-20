@@ -39,10 +39,10 @@ const AboutSection = () => {
               <h2 className="text-white text-4xl md:text-5xl font-bold leading-tight mb-6">
                 WELCOME TO THE
                 <br />
-                COMMANDO FITNESS GYM
+                COMMANDO FITNESS Club
               </h2>
               <p className="text-gray-300 text-lg">
-                At Commando Fitness Gym, we believe in pushing limits and
+                At Commando Fitness Club, we believe in pushing limits and
                 building strength—both physically and mentally. Whether you're
                 just starting your fitness journey or looking to take it to the
                 next level, we’ve got you covered. Our gym offers top-quality

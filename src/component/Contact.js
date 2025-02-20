@@ -1,4 +1,5 @@
 import { Play } from "lucide-react"
+import img from "../asserts/img 1.jpg"
 
 const ContactSection = () => {
   return (
@@ -10,7 +11,7 @@ const ContactSection = () => {
             <div className="relative w-full aspect-square rounded-full overflow-hidden">
               <div className="absolute inset-0 border-[20px] border-[#22c55e] rounded-full" />
               <img
-                src="/placeholder.svg?height=800&width=800"
+                src={img}
                 alt="Training session"
                 className="w-full h-full object-cover"
               />

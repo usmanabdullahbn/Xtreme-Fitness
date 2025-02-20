@@ -4,29 +4,16 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import saim from "../asserts/Saim R.jpg"
 const testimonials = [
   {
     quote:
-      "Ruis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur exceusint occaecat cupidata non proident, sunt in culpa aui officia deser mollit anim laborum reprehenderaui in eau voluptate velit esse quam nihil.",
-    name: "KEVIN ANDREW",
+      "Commando Fitness Gym has completely transformed my fitness journey. The trainers are super motivating, and the workouts push me to my limits. I feel stronger and more confident than ever!",
+    name: "Saim R.",
     role: "Happy Client",
-    image: "/placeholder.svg?height=600&width=800",
+    image: saim,
   },
-  {
-    quote:
-      "Our experience with Xtreme Fitness has been transformative. The expert coaches and state-of-the-art facilities have helped us achieve our fitness goals faster than we thought possible.",
-    name: "SARAH PARKER",
-    role: "Fitness Enthusiast",
-    image: "/placeholder.svg?height=600&width=800",
-  },
-  {
-    quote:
-      "The personalized attention and professional guidance from the trainers have made all the difference in my fitness journey. Highly recommend their services to anyone serious about their health.",
-    name: "MICHAEL CHEN",
-    role: "Regular Member",
-    image: "/placeholder.svg?height=600&width=800",
-  },
+ 
 ];
 
 const Testimonials = () => {

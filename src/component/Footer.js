@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram } from "lucide-react";
+import logo from "../asserts/logo.jpg";
 
 const Footer = () => {
   return (
@@ -10,18 +11,22 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
-              {/* <img
-                src="/placeholder.svg"
+              <img
+                src={logo}
                 alt="Xtreme Fitness"
-                className="w-10 h-10 object-contain"
-              /> */}
-              <span className="text-xl font-bold">COMMANDO FITNESS GYM</span>
+                className="w-10 h-10 object-contain mr-2"
+              />
+              <span className="text-xl font-bold">COMMANDO FITNESS Club</span>
             </Link>
             <p className="text-gray-400 text-sm">
               Your ultimate fitness destination for strength and well-being.
             </p>
             <div className="flex gap-4">
-              {[{ Icon: Facebook, label: "Facebook" }, { Icon: Twitter, label: "Twitter" }, { Icon: Instagram, label: "Instagram" }].map(({ Icon, label }, index) => (
+              {[
+                { Icon: Facebook, label: "Facebook" },
+                { Icon: Twitter, label: "Twitter" },
+                { Icon: Instagram, label: "Instagram" },
+              ].map(({ Icon, label }, index) => (
                 <Link
                   key={index}
                   to="/"
@@ -57,16 +62,18 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-bold">QUICK LINKS</h3>
             <ul className="space-y-2">
-              {["About", "Services", "Trainers", "Pricing", "Contact"].map((item) => (
-                <li key={item}>
-                  <Link
-                    to={`/${item.toLowerCase()}`}
-                    className="text-gray-400 hover:text-[#22c55e] transition-colors flex items-center gap-2"
-                  >
-                    <span className="text-[#22c55e]">▸</span> {item}
-                  </Link>
-                </li>
-              ))}
+              {["About", "Services", "Trainers", "Pricing", "Contact"].map(
+                (item) => (
+                  <li key={item}>
+                    <Link
+                      to={`/${item.toLowerCase()}`}
+                      className="text-gray-400 hover:text-[#22c55e] transition-colors flex items-center gap-2"
+                    >
+                      <span className="text-[#22c55e]">▸</span> {item}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </div>
 
@@ -76,11 +83,13 @@ const Footer = () => {
             <div className="space-y-2">
               <div>
                 <p className="font-medium">Address:</p>
-                <p className="text-gray-400">121 King Street, Melbourne, 3000, Australia</p>
+                <p className="text-gray-400">
+                  121 King Street, Melbourne, 3000, Australia
+                </p>
               </div>
               <div>
                 <p className="font-medium">Email:</p>
-                <p className="text-gray-400">info@commandofitnessgym.com</p>
+                <p className="text-gray-400">info@commandofitnessclub.com</p>
               </div>
               <div>
                 <p className="font-medium">Phone:</p>
@@ -92,7 +101,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-zinc-900 mt-12 pt-6 text-center text-gray-400 text-sm">
-          © 2025 commandofitnessgym.com | All Rights Reserved.
+          © 2025 commandofitnessclub.com | All Rights Reserved.
         </div>
       </div>
     </footer>

@@ -7,7 +7,7 @@ import img from "../asserts/profile.jpg";
 
 const teamMembers = [
   {
-    name: "Sadiq Ali Khan",
+    name: "Faiz",
     role: "CrossFit Coach",
     image: img,
   },

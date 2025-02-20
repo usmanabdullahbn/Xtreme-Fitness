@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import logo from "../asserts/logo.jpg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,8 +23,15 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm">
       <div className="container flex items-center justify-between h-20">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <span className="text-xl font-bold text-white pl-2 lg:pl-20">COMMANDO FITNESS GYM</span>
+        <Link to="/" className="flex items-center gap-2 pl-2 lg:pl-20">
+          <img
+            src={logo}
+            alt="Xtreme Fitness"
+            className="w-10 h-10 object-contain"
+          />
+          <span className="text-xl font-bold text-white">
+            COMMANDO FITNESS Club
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -31,9 +39,11 @@ const Navbar = () => {
           {navItems.map((item) => (
             <Link
               key={item}
-              to='/'
+              to="/"
               className={`text-sm font-medium ${
-                item === "Home" ? "text-[#22c55e]" : "text-white hover:text-[#22c55e]"
+                item === "Home"
+                  ? "text-[#22c55e]"
+                  : "text-white hover:text-[#22c55e]"
               } transition-colors`}
             >
               {item}
@@ -51,7 +61,10 @@ const Navbar = () => {
         </Link>
 
         {/* Mobile Menu Button */}
-        <button className="lg:hidden text-white p-2 rounded-md" onClick={() => setIsOpen(!isOpen)}>
+        <button
+          className="lg:hidden text-white p-2 rounded-md"
+          onClick={() => setIsOpen(!isOpen)}
+        >
           <Menu className="h-6 w-6" />
           <span className="sr-only">Toggle menu</span>
         </button>
@@ -64,7 +77,10 @@ const Navbar = () => {
         } z-50 flex flex-col items-center justify-center`}
       >
         {/* Close Button */}
-        <button className="absolute top-6 right-6 text-white" onClick={() => setIsOpen(false)}>
+        <button
+          className="absolute top-6 right-6 text-white"
+          onClick={() => setIsOpen(false)}
+        >
           <X className="h-8 w-8" />
         </button>
 
