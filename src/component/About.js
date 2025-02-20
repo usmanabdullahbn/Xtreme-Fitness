@@ -39,7 +39,7 @@ const AboutSection = () => {
               <h2 className="text-white text-4xl md:text-5xl font-bold leading-tight mb-6">
                 WELCOME TO THE
                 <br />
-                COMMANDO FITNESS Club
+                COMMANDO FITNESS CLUB
               </h2>
               <p className="text-gray-300 text-lg">
                 At Commando Fitness Club, we believe in pushing limits and

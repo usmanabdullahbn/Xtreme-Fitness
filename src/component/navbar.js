@@ -30,7 +30,7 @@ const Navbar = () => {
             className="w-10 h-10 object-contain"
           />
           <span className="text-xl font-bold text-white">
-            COMMANDO FITNESS Club
+            COMMANDO FITNESS CLUB
           </span>
         </Link>
 

@@ -16,7 +16,7 @@ const Footer = () => {
                 alt="Xtreme Fitness"
                 className="w-10 h-10 object-contain mr-2"
               />
-              <span className="text-xl font-bold">COMMANDO FITNESS Club</span>
+              <span className="text-xl font-bold">COMMANDO FITNESS CLUB</span>
             </Link>
             <p className="text-gray-400 text-sm">
               Your ultimate fitness destination for strength and well-being.
