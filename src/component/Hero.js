@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Facebook, Twitter, Instagram } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
+import { FaTiktok } from "react-icons/fa"; // Importing TikTok icon
 import { ReactTyped } from "react-typed";
 import img from "../asserts/@sadiqAlikhan.svg";
 
@@ -13,7 +14,7 @@ const Hero = () => {
 
       {/* Social Links */}
       <div className="absolute left-6 top-1/2 -translate-y-1/2 flex flex-col gap-6" data-aos="fade-up">
-        {[Facebook, Twitter, Instagram].map((Icon, index) => (
+        {[Facebook, FaTiktok, Instagram].map((Icon, index) => (
           <Link key={index} to="/" className="text-white/80 hover:text-[#22c55e] transition-colors">
             <Icon size={20} />
           </Link>
@@ -44,13 +45,6 @@ const Hero = () => {
         <div className="relative w-96 h-96 rounded-full overflow-hidden border-[8px] border-[#22c55e] shadow-lg" data-aos="fade-up">
           <img src={img} alt="Training session" className="w-full h-full object-cover" />
         </div>
-      </div>
-
-      {/* Slider Dots */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2" data-aos="fade-up">
-        {[0, 1, 2, 3].map((index) => (
-          <button key={index} className={`w-2 h-2 rounded-full ${index === 2 ? "bg-[#22c55e]" : "bg-white/50"}`} aria-label={`Go to slide ${index + 1}`} />
-        ))}
       </div>
 
       {/* Play Button */}

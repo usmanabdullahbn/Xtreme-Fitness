@@ -2,12 +2,19 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import { Dumbbell, Zap, Activity, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Dumbbell,
+  Zap,
+  Activity,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 
 const features = [
   {
     title: "WEIGHT LIFTING",
-    description: "Duia voluptas sit asper natur aut odit aut fugi sed quia conseaunta ma gni dolores eos",
+    description:
+      "Duia voluptas sit asper natur aut odit aut fugi sed quia conseaunta ma gni dolores eos",
     icon: (props) => (
       <svg
         viewBox="0 0 24 24"
@@ -26,17 +33,20 @@ const features = [
   },
   {
     title: "FLEX MUSCLE",
-    description: "Quia voluptas sit asper natur aut odit aut fugi sed quia conseaunta ma gni dolores eos",
+    description:
+      "Quia voluptas sit asper natur aut odit aut fugi sed quia conseaunta ma gni dolores eos",
     icon: Dumbbell,
   },
   {
     title: "POWERFUL VITAMINS",
-    description: "Auia voluptas sit asper natur aut odit aut fugi sed quia conseaunta ma gni dolores eos",
+    description:
+      "Auia voluptas sit asper natur aut odit aut fugi sed quia conseaunta ma gni dolores eos",
     icon: Zap,
   },
   {
     title: "ABDOMINAL SESSIONS",
-    description: "Ruia voluptas sit asper natur aut odit aut fugi sed quia conseaunta ma gni dolores eos",
+    description:
+      "Ruia voluptas sit asper natur aut odit aut fugi sed quia conseaunta ma gni dolores eos",
     icon: Activity,
   },
 ];
@@ -48,7 +58,9 @@ const FeaturesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16" data-aos="fade-up">
           <h3 className="text-[#22c55e] text-xl mb-4">WHY CHOOSE US</h3>
-          <h2 className="text-4xl md:text-5xl font-bold">BUILD YOUR BEST BODY</h2>
+          <h2 className="text-4xl md:text-5xl font-bold">
+            BUILD YOUR BEST BODY
+          </h2>
         </div>
 
         {/* Features Grid */}
@@ -70,13 +82,6 @@ const FeaturesSection = () => {
               {/* Content */}
               <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
               <p className="text-gray-600 mb-4">{feature.description}</p>
-              <Link
-                to="/features"
-                className="text-[#22c55e] font-medium hover:text-[#22c55e]/80 transition-colors inline-flex items-center gap-2"
-              >
-                Read more
-                <ChevronRight className="w-4 h-4" />
-              </Link>
             </div>
           ))}
         </div>
