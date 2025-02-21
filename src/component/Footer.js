@@ -4,20 +4,29 @@ import { Facebook, Twitter, Instagram } from "lucide-react";
 import logo from "../asserts/logo.jpg";
 
 const Footer = () => {
+  // Smooth scrolling function
+  const handleSmoothScroll = (e) => {
+    e.preventDefault();
+    const targetId = e.currentTarget.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop - 80, // Adjust for navbar height
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <footer className="bg-black text-white pt-16 pb-6">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pl-2 sm:pl-24 gap-12">
           {/* Brand Section */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center gap-2">
-              <img
-                src={logo}
-                alt="Xtreme Fitness"
-                className="w-10 h-10 object-contain mr-2"
-              />
+            <a href="#home" onClick={handleSmoothScroll} className="flex items-center gap-2">
+              <img src={logo} alt="Xtreme Fitness" className="w-10 h-10 object-contain mr-2" />
               <span className="text-xl font-bold">COMMANDO FITNESS CLUB</span>
-            </Link>
+            </a>
             <p className="text-gray-400 text-sm">
               Your ultimate fitness destination for strength and well-being.
             </p>
@@ -27,14 +36,14 @@ const Footer = () => {
                 { Icon: Twitter, label: "Twitter" },
                 { Icon: Instagram, label: "Instagram" },
               ].map(({ Icon, label }, index) => (
-                <Link
+                <a
                   key={index}
-                  to="/"
+                  href="/"
                   className="w-10 h-10 bg-zinc-900 rounded-full flex items-center justify-center hover:bg-[#22c55e] transition-colors"
                   aria-label={`Follow us on ${label}`}
                 >
                   <Icon size={20} />
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -62,18 +71,23 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-bold">QUICK LINKS</h3>
             <ul className="space-y-2">
-              {["About", "Services", "Trainers", "Pricing", "Contact"].map(
-                (item) => (
-                  <li key={item}>
-                    <Link
-                      to={`/${item.toLowerCase()}`}
-                      className="text-gray-400 hover:text-[#22c55e] transition-colors flex items-center gap-2"
-                    >
-                      <span className="text-[#22c55e]">▸</span> {item}
-                    </Link>
-                  </li>
-                )
-              )}
+              {[
+                { name: "About", id: "about" },
+                { name: "Services", id: "services" },
+                { name: "Trainers", id: "trainers" },
+                { name: "Pricing", id: "pricing" },
+                { name: "Contact", id: "contact" },
+              ].map(({ name, id }) => (
+                <li key={id}>
+                  <a
+                    href={`#${id}`}
+                    onClick={handleSmoothScroll}
+                    className="text-gray-400 hover:text-[#22c55e] transition-colors flex items-center gap-2"
+                  >
+                    <span className="text-[#22c55e]">▸</span> {name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -83,9 +97,7 @@ const Footer = () => {
             <div className="space-y-2">
               <div>
                 <p className="font-medium">Address:</p>
-                <p className="text-gray-400">
-                  121 King Street, Melbourne, 3000, Australia
-                </p>
+                <p className="text-gray-400">121 King Street, Melbourne, 3000, Australia</p>
               </div>
               <div>
                 <p className="font-medium">Email:</p>

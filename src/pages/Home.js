@@ -13,18 +13,16 @@ import ServicesSection from '../component/Services'
 const Home = () => {
   return (
     <div>
-        {/* <Navbar /> */}
-        <Hero />
-        <FeaturesSection />
-        <AboutSection />
-        <ServicesSection />
-        <Testimonials />
-        <TeamSection />
-        <PricingSection />
-        {/* <BlogSection /> */}
-        <ContactSection />
+      <Hero />
+      <section id="features"><FeaturesSection /></section>
+      <section id="about"><AboutSection /></section>
+      <section id="services"><ServicesSection /></section>
+      <section id=""><Testimonials /></section>
+      <section id="trainers"><TeamSection /></section>
+      <section id="pricing"><PricingSection /></section>
+      <section id="contact"><ContactSection /></section>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

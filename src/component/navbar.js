@@ -1,29 +1,39 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "../asserts/logo.jpg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navItems = ["Home", "About", "Services", "Trainers", "Pricing"];
+  const navItems = [
+    { name: "Home", id: "home" },
+    { name: "About", id: "about" },
+    { name: "Services", id: "services" },
+    { name: "Trainers", id: "trainers" },
+    { name: "Pricing", id: "pricing" },
+    
+  ];
 
-  // Prevent scrolling when menu is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
+  // Smooth Scrolling Function
+  const handleSmoothScroll = (e) => {
+    e.preventDefault();
+    const targetId = e.currentTarget.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop - 80, // Adjust for fixed navbar height
+        behavior: "smooth",
+      });
     }
-  }, [isOpen]);
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm">
       <div className="container flex items-center justify-between h-20">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 pl-2 lg:pl-20">
+        <a href="#home" className="flex items-center gap-2 pl-2 lg:pl-20">
           <img
             src={logo}
             alt="Xtreme Fitness"
@@ -32,33 +42,31 @@ const Navbar = () => {
           <span className="text-xl font-bold text-white">
             COMMANDO FITNESS CLUB
           </span>
-        </Link>
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => (
-            <Link
-              key={item}
-              to="/"
-              className={`text-sm font-medium ${
-                item === "Home"
-                  ? "text-[#22c55e]"
-                  : "text-white hover:text-[#22c55e]"
-              } transition-colors`}
+            <a
+              key={item.id}
+              href={`#${item.id}`}
+              onClick={handleSmoothScroll}
+              className="text-sm font-medium text-white hover:text-[#22c55e] transition-colors"
             >
-              {item}
-            </Link>
+              {item.name}
+            </a>
           ))}
         </nav>
 
         {/* Contact Button (Desktop) */}
-        <Link
-          to="/contact"
+        <a
+          href="#contact"
+          onClick={handleSmoothScroll}
           className="hidden lg:inline-flex border border-[#22c55e] text-white py-2 px-6 rounded-full transition 
                      bg-transparent hover:bg-[#22c55e] hover:text-black"
         >
           Contact
-        </Link>
+        </a>
 
         {/* Mobile Menu Button */}
         <button
@@ -71,41 +79,45 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu Drawer */}
-      <div
-        className={`fixed inset-0 bg-black transition-all ${
-          isOpen ? "h-screen w-full opacity-100" : "h-0 w-0 opacity-0"
-        } z-50 flex flex-col items-center justify-center`}
-      >
-        {/* Close Button */}
-        <button
-          className="absolute top-6 right-6 text-white"
-          onClick={() => setIsOpen(false)}
-        >
-          <X className="h-8 w-8" />
-        </button>
-
-        {/* Mobile Navigation */}
-        <nav className="flex flex-col gap-6 text-center">
-          {navItems.map((item) => (
-            <Link
-              key={item}
-              to={`/${item.toLowerCase().replace(" ", "-")}`}
-              onClick={() => setIsOpen(false)}
-              className="text-xl font-medium text-white hover:text-[#22c55e] transition-colors"
-            >
-              {item}
-            </Link>
-          ))}
-          <Link
-            to="/contact"
+      {isOpen && (
+        <div className="fixed inset-0 bg-black z-50 flex flex-col items-center justify-center">
+          {/* Close Button */}
+          <button
+            className="absolute top-6 right-6 text-white"
             onClick={() => setIsOpen(false)}
-            className="border border-[#22c55e] text-white py-2 px-6 rounded-full transition 
-                       bg-transparent hover:bg-[#22c55e] hover:text-black mt-4"
           >
-            Contact
-          </Link>
-        </nav>
-      </div>
+            <X className="h-8 w-8" />
+          </button>
+
+          {/* Mobile Navigation */}
+          <nav className="flex flex-col gap-6 text-center">
+            {navItems.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                onClick={(e) => {
+                  handleSmoothScroll(e);
+                  setIsOpen(false);
+                }}
+                className="text-xl font-medium text-white hover:text-[#22c55e] transition-colors"
+              >
+                {item.name}
+              </a>
+            ))}
+            <a
+              href="#contact"
+              onClick={(e) => {
+                handleSmoothScroll(e);
+                setIsOpen(false);
+              }}
+              className="border border-[#22c55e] text-white py-2 px-6 rounded-full transition 
+                         bg-transparent hover:bg-[#22c55e] hover:text-black mt-4"
+            >
+              Contact
+            </a>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };
