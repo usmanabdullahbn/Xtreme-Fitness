@@ -1,5 +1,5 @@
-import { Play } from "lucide-react"
-import img from "../asserts/img 1.jpg"
+import { Play } from "lucide-react";
+import img from "../asserts/img 1.jpg";
 
 const ContactSection = () => {
   return (
@@ -75,7 +75,7 @@ const ContactSection = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ContactSection
+export default ContactSection;

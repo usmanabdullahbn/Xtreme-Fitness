@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Dumbbell } from "lucide-react"
+import { motion } from "framer-motion";
+import { Dumbbell } from "lucide-react";
 
 const Loader = () => {
   return (
@@ -20,13 +20,17 @@ const Loader = () => {
         <motion.div
           className="absolute inset-0 flex items-center justify-center"
           animate={{ rotate: 360 }}
-          transition={{ repeat: Number.POSITIVE_INFINITY, duration: 4, ease: "linear" }}
+          transition={{
+            repeat: Number.POSITIVE_INFINITY,
+            duration: 4,
+            ease: "linear",
+          }}
         >
           <Dumbbell size={80} className="text-[#22c55e]" />
         </motion.div>
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default Loader
+export default Loader;

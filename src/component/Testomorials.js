@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import saim from "../asserts/Saim R.jpg"
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useEffect, useState } from "react";
+import saim from "../asserts/Saim R.jpg";
 const testimonials = [
   {
     quote:
@@ -13,7 +13,6 @@ const testimonials = [
     role: "Happy Client",
     image: saim,
   },
- 
 ];
 
 const Testimonials = () => {
@@ -28,11 +27,16 @@ const Testimonials = () => {
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentSlide(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   return (
-    <section className="relative bg-black py-20 overflow-hidden" data-aos="fade-up">
+    <section
+      className="relative bg-black py-20 overflow-hidden"
+      data-aos="fade-up"
+    >
       {/* Background Image Overlay */}
       <div className="absolute inset-0 bg-black/70" />
 
@@ -57,8 +61,12 @@ const Testimonials = () => {
                 {testimonials[currentSlide].quote}
               </blockquote>
               <div className="border-l-4 border-[#22c55e] pl-4">
-                <div className="text-white font-bold">{testimonials[currentSlide].name}</div>
-                <div className="text-gray-400">{testimonials[currentSlide].role}</div>
+                <div className="text-white font-bold">
+                  {testimonials[currentSlide].name}
+                </div>
+                <div className="text-gray-400">
+                  {testimonials[currentSlide].role}
+                </div>
               </div>
             </div>
 

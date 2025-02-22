@@ -1,6 +1,5 @@
+import { Facebook, Instagram, Twitter } from "lucide-react";
 import React from "react";
-import { Link } from "react-router-dom";
-import { Facebook, Twitter, Instagram } from "lucide-react";
 import logo from "../asserts/logo.jpg";
 
 const Footer = () => {

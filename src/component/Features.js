@@ -1,14 +1,13 @@
 "use client";
 
-import React from "react";
-import { Link } from "react-router-dom";
 import {
-  Dumbbell,
-  Zap,
   Activity,
   ChevronLeft,
   ChevronRight,
+  Dumbbell,
+  Zap,
 } from "lucide-react";
+import React from "react";
 
 const features = [
   {

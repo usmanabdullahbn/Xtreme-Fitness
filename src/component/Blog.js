@@ -1,25 +1,28 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
     title: "QUIS AUTEM VEA EUM IURE REPREHENDERIT",
-    excerpt: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    excerpt:
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     image: "",
     date: { day: "07", month: "Feb" },
   },
   {
     title: "REPREHENDERIT IN VOUTA VELIT ESSE CILLUM",
-    excerpt: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    excerpt:
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     image: "",
     date: { day: "12", month: "Mar" },
   },
   {
     title: "SOLUTA NOBIS OSE ALIGEN OPTIO CUMUE",
-    excerpt: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    excerpt:
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     image: "",
     date: { day: "23", month: "Jan" },
   },
@@ -37,7 +40,11 @@ const BlogSection = () => {
   };
 
   const prevPage = () => {
-    setCurrentPage((prev) => (prev - 1 + Math.ceil(blogPosts.length / 3)) % Math.ceil(blogPosts.length / 3));
+    setCurrentPage(
+      (prev) =>
+        (prev - 1 + Math.ceil(blogPosts.length / 3)) %
+        Math.ceil(blogPosts.length / 3)
+    );
   };
 
   return (
@@ -50,7 +57,10 @@ const BlogSection = () => {
         </div>
 
         {/* Blog Posts Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto" data-aos="fade-up">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
+          data-aos="fade-up"
+        >
           {blogPosts.map((post, index) => (
             <article key={index} className="bg-white group">
               {/* Image Container */}
@@ -62,16 +72,23 @@ const BlogSection = () => {
                 />
                 {/* Date Overlay */}
                 <div className="absolute left-6 bottom-6 w-16 h-16 bg-[#22c55e] rounded-full flex flex-col items-center justify-center text-white">
-                  <span className="text-2xl font-bold leading-none">{post.date.day}</span>
+                  <span className="text-2xl font-bold leading-none">
+                    {post.date.day}
+                  </span>
                   <span className="text-sm">{post.date.month}</span>
                 </div>
               </div>
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-4 group-hover:text-[#22c55e] transition-colors">{post.title}</h3>
+                <h3 className="text-xl font-bold mb-4 group-hover:text-[#22c55e] transition-colors">
+                  {post.title}
+                </h3>
                 <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                <Link to="/blog" className="text-[#22c55e] font-medium hover:text-[#22c55e]/80 transition-colors">
+                <Link
+                  to="/blog"
+                  className="text-[#22c55e] font-medium hover:text-[#22c55e]/80 transition-colors"
+                >
                   Read more
                 </Link>
               </div>

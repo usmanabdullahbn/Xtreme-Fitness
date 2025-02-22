@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useState } from "react";
 import logo from "../asserts/logo.jpg";
 
 const Navbar = () => {
@@ -13,7 +13,6 @@ const Navbar = () => {
     { name: "Services", id: "services" },
     { name: "Trainers", id: "trainers" },
     { name: "Pricing", id: "pricing" },
-    
   ];
 
   // Smooth Scrolling Function

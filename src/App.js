@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Navbar from "./component/navbar";
-import Footer from "./component/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
-import ScrollToTop from "./component/ScrollUp";
+import React, { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import Footer from "./component/Footer";
 import Loader from "./component/Loader";
+import Navbar from "./component/navbar";
+import ScrollToTop from "./component/ScrollUp";
+import Home from "./pages/Home";
 
 const App = () => {
   const [loading, setLoading] = useState(true);

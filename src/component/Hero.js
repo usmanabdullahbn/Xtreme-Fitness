@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import { Facebook, Instagram } from "lucide-react";
 import { FaTiktok } from "react-icons/fa"; // Importing TikTok icon
+import { Link } from "react-router-dom";
 import { ReactTyped } from "react-typed";
 import img from "../asserts/@sadiqAlikhan.svg";
 
@@ -13,9 +13,16 @@ const Hero = () => {
       </div>
 
       {/* Social Links */}
-      <div className="absolute left-6 top-1/2 -translate-y-1/2 flex flex-col gap-6" data-aos="fade-up">
+      <div
+        className="absolute left-6 top-1/2 -translate-y-1/2 flex flex-col gap-6"
+        data-aos="fade-up"
+      >
         {[Facebook, FaTiktok, Instagram].map((Icon, index) => (
-          <Link key={index} to="/" className="text-white/80 hover:text-[#22c55e] transition-colors">
+          <Link
+            key={index}
+            to="/"
+            className="text-white/80 hover:text-[#22c55e] transition-colors"
+          >
             <Icon size={20} />
           </Link>
         ))}
@@ -30,25 +37,48 @@ const Hero = () => {
               <ReactTyped strings={["BE"]} typeSpeed={50} showCursor={false} />
             </span>
             <span className="text-[#22c55e]">
-              <ReactTyped strings={["STRONG"]} typeSpeed={50} showCursor={false} />
+              <ReactTyped
+                strings={["STRONG"]}
+                typeSpeed={50}
+                showCursor={false}
+              />
             </span>
           </h1>
           <p className="text-2xl text-white/90" data-aos="fade-up">
-            <ReactTyped strings={["Best GYM And Fitness Center Build Your Health."]} typeSpeed={20} showCursor={false} />
+            <ReactTyped
+              strings={["Best GYM And Fitness Center Build Your Health."]}
+              typeSpeed={20}
+              showCursor={false}
+            />
           </p>
-          <Link to="/join" className="inline-block bg-[#22c55e] text-white text-lg font-semibold py-3 px-8 rounded-full transition hover:bg-[#22c55e]/90" data-aos="fade-up">
+          <Link
+            to="/join"
+            className="inline-block bg-[#22c55e] text-white text-lg font-semibold py-3 px-8 rounded-full transition hover:bg-[#22c55e]/90"
+            data-aos="fade-up"
+          >
             Join us now
           </Link>
         </div>
 
         {/* Image Section */}
-        <div className="relative w-96 h-96 rounded-full overflow-hidden border-[8px] border-[#22c55e] shadow-lg" data-aos="fade-up">
-          <img src={img} alt="Training session" className="w-full h-full object-cover" />
+        <div
+          className="relative w-96 h-96 rounded-full overflow-hidden border-[8px] border-[#22c55e] shadow-lg"
+          data-aos="fade-up"
+        >
+          <img
+            src={img}
+            alt="Training session"
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
 
       {/* Play Button */}
-      <button className="absolute bottom-8 right-8 w-14 h-14 rounded-full bg-[#22c55e] flex items-center justify-center" aria-label="Play video" data-aos="fade-up">
+      <button
+        className="absolute bottom-8 right-8 w-14 h-14 rounded-full bg-[#22c55e] flex items-center justify-center"
+        aria-label="Play video"
+        data-aos="fade-up"
+      >
         <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-white border-b-8 border-b-transparent ml-1" />
       </button>
     </div>

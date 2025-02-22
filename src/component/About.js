@@ -1,7 +1,6 @@
-import { Play } from "lucide-react";
+import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import AOS from "aos";
 import img from "../asserts/about img.jpg";
 
 const stats = [

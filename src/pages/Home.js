@@ -1,13 +1,12 @@
 import React from "react";
-import Hero from "../component/Hero";
-import TeamSection from "../component/Team";
-import Testimonials from "../component/Testomorials";
-import PricingSection from "../component/Pricing";
-import BlogSection from "../component/Blog";
-import FeaturesSection from "../component/Features";
 import AboutSection from "../component/About";
 import ContactSection from "../component/Contact";
+import FeaturesSection from "../component/Features";
+import Hero from "../component/Hero";
+import PricingSection from "../component/Pricing";
 import ServicesSection from "../component/Services";
+import TeamSection from "../component/Team";
+import Testimonials from "../component/Testomorials";
 
 const Home = () => {
   return (

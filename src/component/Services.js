@@ -1,11 +1,11 @@
-import { Play } from "lucide-react";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
 import AOS from "aos";
+import "aos/dist/aos.css";
+import { Play } from "lucide-react";
+import { useEffect } from "react";
 import boxingImg from "../asserts/boxing.jpg";
+import onlineImg from "../asserts/ONLINE COACHING.jpg";
 import trainerImg from "../asserts/PERSONAL TRAINING.jpg";
 import yogaImg from "../asserts/YOGA LESSON.jpg";
-import onlineImg from "../asserts/ONLINE COACHING.jpg";
 
 const services = [
   {
