@@ -63,17 +63,6 @@ const AboutSection = () => {
                 </div>
               ))}
             </div>
-
-            {/* CTA Button */}
-            <button
-              className="bg-transparent border border-gray-700 text-white hover:bg-[#22c55e] hover:border-[#22c55e] group px-6 py-3 rounded-md flex items-center"
-              data-aos="fade-up"
-            >
-              Read more
-              <span className="ml-2 w-6 h-6 rounded-full bg-[#22c55e] group-hover:bg-white flex items-center justify-center">
-                <Play className="w-3 h-3 text-white group-hover:text-[#22c55e]" />
-              </span>
-            </button>
           </div>
         </div>
       </div>

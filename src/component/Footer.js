@@ -97,15 +97,15 @@ const Footer = () => {
             <div className="space-y-2">
               <div>
                 <p className="font-medium">Address:</p>
-                <p className="text-gray-400">121 King Street, Melbourne, 3000, Australia</p>
+                <p className="text-gray-400">Jamia Millia Road Gulshan e Tayybi C-1 Malir City Karachi</p>
               </div>
               <div>
                 <p className="font-medium">Email:</p>
-                <p className="text-gray-400">info@commandofitnessclub.com</p>
+                <p className="text-gray-400">faizcommando26@gmail.com </p>
               </div>
               <div>
                 <p className="font-medium">Phone:</p>
-                <p className="text-gray-400">+61 3 8376 6284</p>
+                <p className="text-gray-400">0316-2301237 / 0334-3904505</p>
               </div>
             </div>
           </div>
