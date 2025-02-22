@@ -23,18 +23,19 @@ const ContactSection = () => {
     setResponseMessage("");
 
     try {
-      const res = await fetch("http://localhost:5000/api/contact", {
+      const res = await fetch("http://localhost:5050/send/email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
       const data = await res.json();
-      if (data.success) {
+      console.log(data)
+      if (data.status==true) {
         setResponseMessage("Message sent successfully!");
         setFormData({ name: "", phone: "", email: "", subject: "", message: "" });
       } else {
-        setResponseMessage("Failed to send message.");
+        setResponseMessage(data.message || "Failed to send message.");
       }
     } catch (error) {
       setResponseMessage("Error sending message.");
@@ -63,7 +64,7 @@ const ContactSection = () => {
               </h2>
             </div>
 
-            <form className="space-y-4" data-aos="fade-up" onSubmit={handleSubmit}>
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="grid grid-cols-2 gap-4">
                 <input
                   type="text"
