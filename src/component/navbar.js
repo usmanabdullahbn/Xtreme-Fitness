@@ -13,6 +13,7 @@ const Navbar = () => {
     { name: "Services", id: "services" },
     { name: "Trainers", id: "trainers" },
     { name: "Pricing", id: "pricing" },
+    { name: "Contact", id: "contact" },
   ];
 
   // Smooth Scrolling Function
