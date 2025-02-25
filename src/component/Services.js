@@ -126,16 +126,6 @@ const ServicesSection = () => {
             </div>
           ))}
         </div>
-
-        {/* CTA Button */}
-        <div className="text-center" data-aos="fade-up">
-          <button className="inline-flex items-center bg-[#22c55e] text-white hover:bg-black hover:text-white px-8 py-4 rounded-full text-lg font-bold transition-colors">
-            Join us now
-            <span className="ml-2 w-6 h-6 rounded-full bg-white flex items-center justify-center">
-              <Play className="w-3 h-3 text-[#22c55e]" />
-            </span>
-          </button>
-        </div>
       </div>
     </section>
   );

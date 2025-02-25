@@ -112,7 +112,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-zinc-900 mt-12 pt-6 text-center text-gray-400 text-sm">
-          © 2025 commandofitnessclub.com | All Rights Reserved.
+          © 2025 Techxudo.com | All Rights Reserved.
         </div>
       </div>
     </footer>

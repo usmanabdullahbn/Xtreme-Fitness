@@ -72,15 +72,6 @@ const Hero = () => {
           />
         </div>
       </div>
-
-      {/* Play Button */}
-      <button
-        className="absolute bottom-8 right-8 w-14 h-14 rounded-full bg-[#22c55e] flex items-center justify-center"
-        aria-label="Play video"
-        data-aos="fade-up"
-      >
-        <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-white border-b-8 border-b-transparent ml-1" />
-      </button>
     </div>
   );
 };
